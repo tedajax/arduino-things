@@ -40,7 +40,7 @@ void setup() {
 
 // the loop routine runs over and over again forever:
 void loop() {
-  morse_str("HELLOWORLD");
+  morse_str("SOS");
 }
 
 void morse_str(char* str) {
