@@ -66,11 +66,11 @@ void morse_char(char c) {
   int packed = (blip & blip_mask);
   
   int blips[5];
-  blips[0] = packed >> 4;
-  blips[1] = packed >> 3;
-  blips[2] = packed >> 2;
-  blips[3] = packed >> 1;
-  blips[4] = packed >> 0;
+  blips[0] = packed >> 4 & 0x01;
+  blips[1] = packed >> 3 & 0x01;
+  blips[2] = packed >> 2 & 0x01;
+  blips[3] = packed >> 1 & 0x01;
+  blips[4] = packed >> 0 & 0x01;
   
   for (int i = 0; i < count; ++i) {
     if (blips[i]) {
